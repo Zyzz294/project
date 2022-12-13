@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+}
+
+.image {
+  width: 60vw;
+  height: 60vh;
+  border-radius: 50px;
+}
+.btn {
+  background-color: black;
+  color: white;
+  border-radius: 1em;
+  font-size: 1.8em;
+  margin-top: 1em;
+  padding: 15px;
+}
+
+.btn:hover{
+  background-color:#002ead;
+  transition: 0.7s;
+  transform: translateX(5px) translateY(-7px);
+}
+.grp {
+  display: flex;
+  flex-direction: column;
+}
+.position{
+  position: relative;
+}
+.logo {
+  position: absolute;
+  top: -5%;
+  left: 3%;
+}
