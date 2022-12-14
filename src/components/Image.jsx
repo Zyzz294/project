@@ -16,22 +16,32 @@ const Image = () => {
   
   useEffect(() => {
     setInterval(() => {
-      setSelectedImage(selectedImage => selectedImage > 3 ? 0 : selectedImage + 1)
+      setSelectedImage(selectedImage => selectedImage > 3 ? selectedImage + 1 : 0)
     }, 99999)
   }, [])
 
   return (
     <div className='position'>
       <h1>TURKIYE</h1>
+      <p>Click the buttons to travel around TURKIYE !</p>
       <br />
       <img src={allImages[selectedImage]} alt="flag" className='image'/>
       <div>
+      <button
+        onClick={() => {
+          if (selectedImage > 0)
+            setSelectedImage(selectedImage - 1)
+        }}
+        className='btn'
+      >Prev</button>
       <button
       onClick={() => {
         if (selectedImage < allImages.length -1 ) 
         setSelectedImage(selectedImage + 1)
       }}
-       className='btn'>Click to travel around TURKIYE !</button>
+       className='btn'>Next
+       </button>
+
       </div>
       <img src={image6} alt="logo" width={60} className="logo"/>
     </div>
